@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WDV101 Intro HTML and CSS</title>
+
+<style>
+
+	form	{
+		width:600px;
+		margin:auto;
+		background-color:lightblue;	
+		padding-left: 20px;
+	}
+	
+	form legend	{
+		font-size:larger;
+		text-align:center;
+	}
+	
+	
+
+
+</style>
+
+</head>
+
+<body>
+<h1>WDV101 Intro HTML and CSS</h1>
+<h2>UNIT 5 - Lesson 2 Server Side Forms</h2>
+<p>This is an example input form that will demonstrate how a form connects to a server side process.</p>
+<form id="form1" name="form1" method="post" action="demonstrateFormHandler.php">
+
+  <legend>Example Form</legend>
+  
+  <p>
+  	<label for="first_name">First Name:</label> 
+    <input type="text" name="first_name" id="first_name" />
+  </p>
+  
+  <p>
+  	<label for="last_name">Last Name:</label> 
+    <input type="text" name="last_name" id="last_name" />
+  </p>
+    
+    <p>
+  	<label for="email">Email:</label> 
+    <input type="email" name="email" id="email" />
+  </p>
+    
+    <p>Current Academic Standing<br>
+        <input type="radio" name="standing" id="HS" value="HighSchool"/>
+        <label for="HS">High School</label> <br>
+        <input type="radio" name="standing" id="freshman" value="Freshman"/>
+        <label for="freshman">Freshman</label> <br>
+        <input type="radio" name="standing" id="sophomore" value="Sophomore"/>
+        <label for="sophomore">Sophomore</label> <br>
+  </p>
+  
+  <p>
+  	<label for="school_name">School Name:</label> 
+    <input type="text" name="school_name" id="school_name" />
+  </p>
+    
+    <p>
+  	<label for="selectedMajor">Select Major:</label> 
+    <select id="selectedMajor" name="selectedMajor">
+        <option></option>
+        <option value="CIS">Computer Information Systems</option>
+        <option value="GD">Graphic Design</option>
+        <option value="WD">Web Development</option>
+    </select>
+  </p>
+  
+    <p>
+        <input type="checkbox" id="programInfo" name="programInfo" value="Info">
+        <label for="programInfo">Please contact me with program information</label><br>
+        <input type="checkbox" id="programAdvise" name="programAdvise" value="Advisor">
+        <label for="programAdvise">I would like to contact an program advisor</label><br>
+  </p>
+    
+    <p>
+        <label for="comments">Comments:</label>
+    </p>
+    <textarea id="comments" name="comments" rows="4" cols="50">Please input any comments you'd like us to know</textarea>
+    
+  <p>
+    <input type="submit" name="button" id="button" value="Submit" />
+    <input type="reset" name="button2" id="button2" value="Reset" />
+  </p>
+  
+</form>
+
+<p>&nbsp;</p>
+</body>
+
+</html>
