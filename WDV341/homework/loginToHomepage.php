@@ -2,7 +2,7 @@
 session_cache_limiter('none');
 session_start();
 require '../dbConnect.php';
-$theUrl = "logHomepage.html";
+$theUrl = "logHomepage.php";
 function redirect($url) {
         header('Location: '.$url);
         die();
