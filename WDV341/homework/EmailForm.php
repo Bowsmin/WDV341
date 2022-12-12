@@ -3,8 +3,11 @@ require_once('functions.php');
 $problem = false;
 $theName;
 $theEmail;
-emailSend;
-$myEmail = "josiah2000anders0n@gmail.com";
+$emailSend;
+$subject1 = "Contact Email Form";
+$subject2 = "Conformation Email"; 
+$headers = 'From: phpcontactform@example.com';
+$myEmail = "josiah2000anderson@gmail.com";
 ?>
 <!DOCTYPE html>
 <html>
@@ -54,10 +57,10 @@ $myEmail = "josiah2000anders0n@gmail.com";
                 <?php
              
                 $emailSend = "Thank you we have received your information. We will contact you soon for the reasons stated in the form. Thank you.";
-                $theEmail = $_POST('email');
-                mail($theEmail, "Contact Email Form", $emailSend);
+                $theEmail = $_POST['email'];
+                mail($theEmail, $subject1, $emailSend, $headers);
                 $conEmail = "Received from $theEmail";
-                mail($myEmail, "Conformation", $conEmail);
+                mail($myEmail, $subject12, $conEmail, $headers);
                 
             }
         }
@@ -66,9 +69,9 @@ $myEmail = "josiah2000anders0n@gmail.com";
             
             ?>
             <h2>Apply Below</h2>
-            <form id='email_form' name='email_form' method='post' >
-            <label for='name'>Contact Name: </label><input type='text' name='name' id='name'>
-            <label for='email'>Email Address: </label><input type='text' name='email' id='email'>
+            <form id='email_form' name='email_form' method='post'>
+            <label for='name'>Contact Name: </label><input type='text' name='name' id="nm">
+            <label for='email'>Email Address: </label><input type='text' name='email' id="em">
             <label for='contactR'>Reasons for contact:</label> <select>
                     <option value="op1">Reason 1</option>
                     <option value="op2">Reason 2</option>
